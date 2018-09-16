@@ -34,7 +34,7 @@ var hello2 = function (color = 'red', score = 20) {
 
 var hello3 = (param1, param2, param3) => {
     param = param1 || param2 || param3 || 'SuperDev';
-    console.log('Param: ' + param);
+   // console.log('Param: ' + param);
 }
 
 // hello3();
@@ -48,6 +48,7 @@ function hello4(a, b) {
     console.log('==:' + (a == b));
     console.log('===:' + (a === b));
 }
+
 // hello4(undefined, null);
 // hello4(undefined, 0);
 // hello4(null, false);
@@ -63,4 +64,4 @@ function hello5(flag){
 }
 
 // hello5('2');
-// hello5('0');
+hello5('0');
