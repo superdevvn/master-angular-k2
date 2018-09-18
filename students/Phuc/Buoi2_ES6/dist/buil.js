@@ -1,38 +1,18 @@
-var hello4 = function (firstName, lastName) {
-    console.log(firstName, lastName);
-};
-hello4('Super', 'Dev');
-var Person = (function () {
-    function Person() {
-    }
-    return Person;
-}());
-var hello = function (person) {
-    var firstName = person.firstName, lastName = person.lastName, age = person.age;
-    alert("Hello " + firstName + " " + lastName + " " + age + " years old");
-};
-hello({
-    firstName: 'Super',
-    lastName: 'Dev',
-    age: 18
-});
-var hello2 = function (_a) {
-    var firstName = _a.firstName, lastName = _a.lastName, age = _a.age;
-    alert("Hello " + firstName + " " + lastName + " " + age + " years old");
-};
-var person = new Person();
-person.firstName = 'Super';
-person.lastName = 'Dev';
-person.age = 18;
-hello2(person);
-var Person1 = (function () {
-    function Person1() {
-    }
-    return Person1;
-}());
-function hello3(firstName, lastName) {
-    var person = { firstName: firstName, lastName: lastName };
-    console.log(person);
+function func01(name, age) {
+    return "func01 My name is " + name + ", " + age + " years old";
 }
-hello3('Super', 'dev');
+var func02 = function (name, age) {
+    return "func02 My name is " + name + ", " + age + " years old";
+};
+var func03 = function (name, age) {
+    return "func03 My name is " + name + ", " + age + " years old";
+};
+var func04 = function (name, age) { return "func04 My name is " + name + ", " + age + " years old"; };
+var func05 = function (name) {
+    return "func05 My name is " + name;
+};
+var courses = ["Android", "Java", "PHP", "Angular"];
+console.log(courses.map(function (course) {
+    return course.toUpperCase();
+}));
 //# sourceMappingURL=buil.js.map
