@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        // "outFile": "dist/build.js",
+        "sourceMap": true,
+        "target": "es5",
+        "lib": ["es6", "dom"]
+    },
+    "include": [
+        "src/*.ts",
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
