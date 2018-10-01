@@ -1,0 +1,17 @@
+<div class="border">
+  <div class="line">
+    <label>First name: </label>  
+    <input [(ngModel)]="firstName" 
+      (keyup)="keyUp()">
+  </div>
+  <div class="line">
+    <label>Last name: </label>
+    <input [(ngModel)]="lastName">
+  </div>
+  <label>{{lastName}}</label>
+  <div class="line">
+    <label>Status: </label>
+    <input type="checkbox" [(ngModel)]="status">
+  </div>
+  <button (click)="clickMe()">Click me</button>
+</div>
