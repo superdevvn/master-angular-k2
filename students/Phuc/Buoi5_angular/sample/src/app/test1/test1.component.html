@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="item">
+        <span>Firstname:</span>
+        <input [(ngModel)] ="firstname" type="text">
+    </div>
+    <div class="item">
+        <span>Lastname:</span>
+        <input [(ngModel)] ="Lasttname" type="text">
+    </div> 
+    
+    <label for="">{{firstname}}</label>
+
+      <div class="item">
+          <span>status:</span>
+          <input [(ngModel)] ="status" type="checkbox">
+      </div> 
+      <p>
+        <button (click) ="clickMe()">Click me</button>
+      </p>
+</div>
