@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<a [routerLink]="['/test1']" routerLinkActive="text-red" >Go to Test 1</a>
+<a [routerLink]="['/test2']" routerLinkActive="text-blue" >Go to Test 2</a>
+<br>
+<button (click)="gotoTest1()">Go to Test 1</button>
+<button (click)="gotoTest2()">Go to Test 2</button>
+<br>
+<router-outlet></router-outlet>
