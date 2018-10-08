@@ -1,0 +1,140 @@
+//Buổi 1: github learning//
+
+git clone <url>
+
+git add . ---> chọn toàn bộ file
+	<=> Stage All
+
+git commit -m "message"
+
+git pull
+
+git push
+
+git checkout <tên branch>
+	<=> click double
+
+Discart --> thay đổi
+
+Respository
+
+Những biến ko có g.trị, g.trị sai:
+	+ undefined,
+	+ null,
+	+ '', //chuỗi rỗng
+	+ 0,
+	+ false,
+	+ NaN (not a number) //lỗi khi conver từ chuỗi ko qua đc số
+	
+	
+undefined == null
+0 == false
+0 == '0'
+1 == '1'
+
+----------------------------------
+
+//Buổi 2: TypeScript//
+
+typescript cho phép khai báo biến có nhiều kiểu dữ liệu
+
+target:
+	ES5 - default -> IE
+	ES6+
+	
+sourceMap: map file ts để debug
+
+xử lý bất đồng bộ
+
+--------------------------------
+
+//Buổi 3: Bootstrap 4//
+
+-Color:
+	+primary info success warning danger
+	+secondary dark
+	
+-Size: 
+	+3.xx: xs sm md lg xl
+	4.xx: sm md lg
+	
+-Col:
+
+-margin:
+	+m
+	+mx: ml, mr
+	+mx: mt, mb
+	
+--------------------------------------
+
+//Buổi 4: JQuery//
+
+local: webpack, ts-loader, typescript
+global: webpack-cli
+
+
+tọa độ chuột -> vẽ toldtip
+
+--------------------------------------
+
+//Buổi 5: Angular//
+
+CLI
+	-ng new
+	-ng serve
+	-ng generate
+		+component
+		+library
+		+service
+		+pipe
+		+module
+	
+life-circle:
+	kết thúc hàm ngOnInit() 
+		-> bắt đầu đưa g.trị vào giao diện
+			-> bắt đầu hàm ngAfterViewInit()
+	=> xử lý bất đồng bộ
+	
+bindding:
+	{{ }}
+	html -> ts: ( )
+	ts -> html: [ ]
+	html <=> ts: [(ngModel)]=" "
+	event: ( )
+	
+	*ngModel -> FormsModle
+	
+Phân biệt
+	<select>
+		<option>1</option>
+		<option>2</option>
+	</select>
+
+	<select>
+		<option value="No1">1</option>
+		<option value="No2">2</option>
+	</select>
+	
+--------------------------------------
+
+//Buổi 6: Router//
+
+Route: đường dẫn
+	-path
+	-redirect + pathMatch
+		-> component
+	-children
+	
+Router: điều hướng đường dẫn
+	[routerLink]="link" -> đường link
+	routerLinkActive = "class" -> hight light
+	
+note: add templet:
+	- add all file trong assets của templet vào assets của project (với thư mục tên của templet)
+	- thêm js và css theo file index trong angular.json
+	
+--------------------------------------
+
+//Buổi 7: Service //
+
+coppy debounce, resize lên đầu
