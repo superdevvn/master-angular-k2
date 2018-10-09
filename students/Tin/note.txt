@@ -137,4 +137,32 @@ note: add templet:
 
 //Buổi 7: Service //
 
-coppy debounce, resize lên đầu
+Lỗi js ko hoạt động có thể do hàm debounce() (và hàm resizeitems()) trong main.js
+ -> coppy debounce(), resizeitems() lên trên
+ 
+Lỗi ngModel do chưa có FormsModle
+
+--
+1. tạo app mới:
+	ng new name_app --service --routing
+	
+2. bỏ assets templet vào:
+
+3. npm những package cần:
+	npm i jquery --save
+	npm i @types/jquery --dev-save
+	
+4. import js và css templet vào angular.json
+
+----------------------------------
+
+//enviroments//
+
+request: main/user
+	-canActive của main:
+		+Lấy token từ localStorage
+		+K.tra (gởi token về server)
+		+Nếu đúng -> server trả về danh sách quyền của user
+	-canActive của /user
+		+có quyền vào trang /user hay ko
+
