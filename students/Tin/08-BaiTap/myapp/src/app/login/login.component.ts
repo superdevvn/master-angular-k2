@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+
   login() {
     if (this.username.valueOf() === 'admin' && this.password.valueOf() === 'admin') {
       this.utilityService.setUser(this.username, this.password);
@@ -22,6 +23,5 @@ export class LoginComponent implements OnInit {
     } else {
       alert('This account is not available !!!');
     }
-
   }
 }

@@ -18,9 +18,11 @@ export class WelcomeComponent implements OnInit {
   }
 
   logout() {
-    if (window.confirm('Are you sure ???')) {
-      this.utilityService.removeUser();
-      this.router.navigate(['login']);
-    }
+    this.router.navigate(['login']);
+  }
+
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnDestroy() {
+    this.utilityService.removeUser();
   }
 }

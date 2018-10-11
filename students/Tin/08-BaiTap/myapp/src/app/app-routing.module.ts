@@ -6,7 +6,8 @@ import { AuthService } from './auth.service';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent, canActivate: [AuthService], children: [
+  {path: '', component: AppComponent, canActivate: [AuthService], canDeactivate: [AuthService],
+    children: [
     {path: '', component: WelcomeComponent}
   ]},
   {path: 'login', component: LoginComponent}
