@@ -1,0 +1,12 @@
+<div class="row mx-0">
+  <div class="col-md-6">
+    <input-control [label]="'Input 1'" [(model)]="input1"></input-control>
+  </div>
+  <div class="col-md-6">
+    <input-control [label]="'Input 2'" [(model)]="input2"></input-control>
+  </div>
+  <div class="col-md-12">
+    <button class="btn btn-sm btn-primary" (click)="click()">Click Me</button>
+    <grid-control *ngIf="gridOption" [option]="gridOption" #grid></grid-control>
+  </div>
+</div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-service": {
+    "sameple-api": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-service",
+            "outputPath": "dist/sameple-api",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,27 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/pike-admin/plugins/switchery/switchery.min.css",
-              "src/assets/pike-admin/css/bootstrap.min.css",
-              "src/assets/pike-admin/font-awesome/css/font-awesome.min.css",
-              "src/assets/pike-admin/css/style.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/pike-admin/js/modernizr.min.js",
-              "src/assets/pike-admin/js/jquery.min.js",
-              "src/assets/pike-admin/js/moment.min.js",
-              "src/assets/pike-admin/js/popper.min.js",
-              "src/assets/pike-admin/js/bootstrap.min.js",
-              "src/assets/pike-admin/js/detect.js",
-              "src/assets/pike-admin/js/fastclick.js",
-              "src/assets/pike-admin/js/jquery.blockUI.js",
-              "src/assets/pike-admin/js/jquery.nicescroll.js",
-              "src/assets/pike-admin/js/jquery.scrollTo.min.js",
-              "src/assets/pike-admin/plugins/switchery/switchery.min.js",
-              "src/assets/pike-admin/plugins/waypoints/lib/jquery.waypoints.min.js",
-              "src/assets/pike-admin/plugins/counterup/jquery.counterup.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -62,35 +44,24 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
-            },
-            "superdev":{
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.superdev.ts"
-                }
-              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-service:build"
+            "browserTarget": "sameple-api:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-service:build:production"
-            },
-            "superdev": {
-              "browserTarget": "angular-service:build:superdev"
+              "browserTarget": "sameple-api:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-service:build"
+            "browserTarget": "sameple-api:build"
           }
         },
         "test": {
@@ -124,7 +95,7 @@
         }
       }
     },
-    "angular-service-e2e": {
+    "sameple-api-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -132,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-service:serve"
+            "devServerTarget": "sameple-api:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-service:serve:production"
+              "devServerTarget": "sameple-api:serve:production"
             }
           }
         },
@@ -152,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "angular-service"
+  "defaultProject": "sameple-api"
 }
