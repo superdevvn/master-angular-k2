@@ -1,0 +1,17 @@
+<div class="row mx-0">
+  <div class="col-md-4 offet-md-4">
+    <app-input-control label="Username" [(model)]="a" required="false" (onKeyup)="onKeyup($event)" disabled="true"></app-input-control>
+    {{a}}
+  </div>
+</div>
+<div class="row mx-0">
+  <div class="col-md-4 offet-md-4">
+    <app-input-control type="password"></app-input-control>
+  </div>
+</div>
+<br>
+<div class="row mx-0">
+  <div class="col-md-4 offet-md-4">
+    <button class="btn btn-success" type="submit">Login</button>
+  </div>
+</div>
