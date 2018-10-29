@@ -1,0 +1,2 @@
+<span>{{label}} <span *ngIf="required" class="text-danger">*</span></span>
+<input [ngModel]="_model" (ngModelChange)="ngModelChange($event)" [type]="type" class="form-control form-control-sm" (keyup)="keyup()">
