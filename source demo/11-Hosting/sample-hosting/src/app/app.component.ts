@@ -13,6 +13,8 @@ export class AppComponent {
   }
 
   import(){
-    this.excelService.import();
+    this.excelService.import().then(records=>{
+      console.log(records);
+    });
   }
 }
