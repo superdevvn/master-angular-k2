@@ -24,13 +24,14 @@ export class AppComponent {
     ];
     this.gridOption = {
       type: 'local',
+      key: 'oiihoijjohio',
       items: items,
       addable: true,
-      editable: {
-        onSave: (item)=>{
-          console.log(item);
-        }
-      },
+      // editable: {
+      //   onSave: (item)=>{
+      //     console.log(item);
+      //   }
+      // },
       commands: [
         {
           icon: (item)=>{
@@ -47,7 +48,13 @@ export class AppComponent {
         {
           type: 'string',
           field: 'firstName',
-          title: 'First Name'
+          title: 'First Name',
+          editor: {
+            alwayDisplay: true,
+            click: (item)=>{
+              console.log(item)
+            }
+          }
         },
         {
           type: 'string',
