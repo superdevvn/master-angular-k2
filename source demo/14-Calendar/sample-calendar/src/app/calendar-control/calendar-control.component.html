@@ -1,1 +1,6 @@
 <div #calendar></div>
+<div style="background-color:black; color: white; display: none; position: fixed; z-index: 10000" #tooltip>
+  <p *ngFor="let tooltipInfo of tooltipInfos">
+    {{tooltipInfo.title}} : {{tooltipInfo.value}}
+  </p>
+</div>
