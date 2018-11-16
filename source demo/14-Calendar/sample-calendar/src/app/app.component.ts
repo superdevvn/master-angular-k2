@@ -2,6 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { CalendarControlComponent } from './calendar-control/calendar-control.component';
 import { CalendarEvent, CalendarOption, TooltipInfo } from './calendar-control/calendar-control.model';
 import * as moment from 'moment';
+import { ObserverService } from './observer.service';
+import { Observer1Service } from './observer1.service';
+import { Observer2Service } from './observer2.service';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +15,17 @@ export class AppComponent {
   calendarOption: CalendarOption;
   @ViewChild('calendar') calendar: CalendarControlComponent;
   title = 'app';
-  ngOnInit(){
+
+  constructor(private observerService: ObserverService,
+    private observer1Service: Observer1Service,
+    private observer2Service: Observer2Service) {
+    let user = this.observerService.getUserById('id1');
+    console.log(user);
+  }
+
+  ngOnInit() {
     this.calendarOption = {
-      getTooltipInfos: (calendarEvent)=>{
+      getTooltipInfos: (calendarEvent) => {
         let results: TooltipInfo[] = [];
         results.push({
           title: 'Teacher',
@@ -28,13 +39,13 @@ export class AppComponent {
       }
     }
   }
-  addRandomEvent(){
+  addRandomEvent() {
     let from = moment('2018/11/11 10:00').toISOString();
     let to = moment('2018/11/11 12:00').toISOString();
     const event: CalendarEvent = {
       resourceId: '1',
       title: 'Demo 1',
-      start:  from,
+      start: from,
       end: to,
       data: {
         teacher: 'Peter',
@@ -43,5 +54,9 @@ export class AppComponent {
       }
     }
     this.calendar.event.add(event);
+  }
+
+  clickDay(event: any) {
+    console.log(event);
   }
 }

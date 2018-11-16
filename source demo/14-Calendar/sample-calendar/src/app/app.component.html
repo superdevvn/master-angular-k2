@@ -1,3 +1,3 @@
 <button (click)="addRandomEvent()">Add Event</button>
-<app-calendar-control [option]="calendarOption" #calendar></app-calendar-control>
+<app-calendar-control [option]="calendarOption" (onClickDay)="clickDay($event)" #calendar></app-calendar-control>
 <router-outlet></router-outlet>
