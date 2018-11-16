@@ -40,8 +40,8 @@ export class AppComponent {
     }
   }
   addRandomEvent() {
-    let from = moment('2018/11/11 10:00').toISOString();
-    let to = moment('2018/11/11 12:00').toISOString();
+    let from = moment('2018/11/16 10:00').toISOString();
+    let to = moment('2018/11/16 15:00').toISOString();
     const event: CalendarEvent = {
       resourceId: '1',
       title: 'Demo 1',
@@ -56,7 +56,22 @@ export class AppComponent {
     this.calendar.event.add(event);
   }
 
+  index = 0;
   clickDay(event: any) {
-    console.log(event);
+    let from = (event.date as Date).toISOString();
+    let to = new Date((event.date as Date).setHours((event.date as Date).getHours() + 2)).toISOString();
+    const calendarEvent = {
+      resourceId: event.resource.id,
+      title: `Demo ${this.index++}`,
+      start: from,
+      end: to,
+      data: {
+        teacher: 'Peter',
+        age: 18,
+        gender: 'Male'
+      }
+    }
+    console.log(calendarEvent);
+    this.calendar.event.add(calendarEvent);
   }
 }

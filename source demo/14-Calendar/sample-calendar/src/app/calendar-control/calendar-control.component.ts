@@ -58,24 +58,30 @@ export class CalendarControlComponent implements OnInit {
         title: 'Dev'
       }],
       events: [],
-      dayClick: (date: Moment, jsEvent: MouseEvent, view: Default, resourceObj: any) =>{
-        console.log('.a.sdasdasd');
+      editable: true,
+      eventDrop: (event: CalendarEvent) => {
+        console.log(event);
+      },
+      eventResize: (event: CalendarEvent) => {
+        console.log(event);
+      },
+      dayClick: (date: Moment, jsEvent: MouseEvent, view: Default, resourceObj: any) => {
         this.onClickDay.emit({
           date: date.toDate(),
           resource: resourceObj,
           jsEvent: jsEvent
         });
       },
-      eventMouseover: (event: CalendarEvent, jsEvent: MouseEvent, view: Default)=> {
+      eventMouseover: (event: CalendarEvent, jsEvent: MouseEvent, view: Default) => {
         console.log(event.title);
-        if(this.option && this.option.getTooltipInfos) {
+        if (this.option && this.option.getTooltipInfos) {
           this.tooltipInfos = this.option.getTooltipInfos(event);
         } else this.tooltipInfos = [];
         $(this.tooltip.nativeElement).css('top', jsEvent.clientY + 10);
         $(this.tooltip.nativeElement).css('left', jsEvent.clientX + 10);
         $(this.tooltip.nativeElement).show();
       },
-      eventMouseout: (event: CalendarEvent, jsEvent: MouseEvent, view: Default)=>{
+      eventMouseout: (event: CalendarEvent, jsEvent: MouseEvent, view: Default) => {
         $(this.tooltip.nativeElement).hide();
       }
     });
