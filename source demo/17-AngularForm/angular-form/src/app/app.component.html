@@ -1,0 +1,24 @@
+<!-- <form #form="ngForm">
+  <label>Username</label>
+  <input name="a" [(ngModel)]="username" required="true">
+  <label>Password</label>
+  <input name="password" [(ngModel)]="password" [required]="username != 'ABC'">
+</form>
+{{form.valid}}
+<button [disabled]="form.invalid" (click)="loginTemplateForm()">Login</button> -->
+
+<form [formGroup]="reactiveForm" (ngSubmit)="loginReactiveForm()">
+    <label>Username</label>
+    <input [ngStyle]="{'color:red': reactiveForm?.controls?.username?.invalid}" formControlName="username">
+    <span *ngIf="reactiveForm?.controls?.username?.errors?.required">THIS FIELD IS REQUIRED</span>
+    <span *ngIf="reactiveForm?.controls?.username?.errors?.maxlength">MAX LENGTH 10</span>
+    <span *ngIf="reactiveForm?.controls?.username?.errors?.forbiddenName">Forbidden Name</span>
+    <br>
+    <label>Password</label>
+    <input type="password" formControlName="password">
+    <button type="button" [disabled]="reactiveForm.invalid || reactiveForm.pristine">Login</button>
+  </form>
+  {{reactiveForm.valid}}
+  
+
+<router-outlet></router-outlet>
